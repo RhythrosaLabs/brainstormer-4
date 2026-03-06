@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="sidebar-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <linearGradient id="msg-user" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6c3de8"/>
+      <stop offset="100%" style="stop-color:#a855f7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="url(#bg)"/>
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="220" height="700" fill="url(#sidebar-grad)" rx="0"/>
+  <rect x="0" y="0" width="220" height="700" fill="#000" opacity="0.2"/>
+
+  <!-- Logo -->
+  <text x="20" y="38" font-family="monospace" font-size="18" font-weight="bold" fill="#a855f7" filter="url(#glow)">brAInstormer</text>
+  <line x1="10" y1="50" x2="210" y2="50" stroke="#333" stroke-width="1"/>
+
+  <!-- Sidebar items -->
+  <rect x="10" y="60" width="200" height="36" rx="8" fill="#a855f7" opacity="0.2"/>
+  <rect x="20" y="73" width="16" height="12" rx="3" fill="#a855f7"/>
+  <text x="44" y="83" font-family="sans-serif" font-size="13" fill="#d8b4fe">AI Chat</text>
+
+  <rect x="20" y="113" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="125" font-family="sans-serif" font-size="13" fill="#888">Image Editor</text>
+  <rect x="20" y="143" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="155" font-family="sans-serif" font-size="13" fill="#888">Video Editor</text>
+  <rect x="20" y="173" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="185" font-family="sans-serif" font-size="13" fill="#888">Audio DAW</text>
+  <rect x="20" y="203" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="215" font-family="sans-serif" font-size="13" fill="#888">3D Viewer</text>
+  <rect x="20" y="233" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="245" font-family="sans-serif" font-size="13" fill="#888">Code Editor</text>
+  <rect x="20" y="263" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="275" font-family="sans-serif" font-size="13" fill="#888">Documents</text>
+  <rect x="20" y="293" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="305" font-family="sans-serif" font-size="13" fill="#888">Spreadsheet</text>
+  <rect x="20" y="323" width="16" height="16" rx="3" fill="#666"/>
+  <text x="44" y="335" font-family="sans-serif" font-size="13" fill="#888">Charts</text>
+
+  <!-- Model selector in sidebar -->
+  <rect x="10" y="600" width="200" height="36" rx="8" fill="#1e1e3a" stroke="#333" stroke-width="1"/>
+  <text x="20" y="623" font-family="sans-serif" font-size="11" fill="#888">Model: GPT-4o</text>
+  <text x="175" y="623" font-family="sans-serif" font-size="14" fill="#666">⌄</text>
+
+  <!-- Chat area background -->
+  <rect x="220" y="0" width="980" height="700" fill="#0d0d1a"/>
+
+  <!-- Top bar -->
+  <rect x="220" y="0" width="980" height="56" fill="#111122" stroke="#222" stroke-width="1"/>
+  <text x="240" y="34" font-family="sans-serif" font-size="16" font-weight="bold" fill="#fff">AI Chat</text>
+  <text x="340" y="34" font-family="sans-serif" font-size="12" fill="#555">· GPT-4o · Claude Sonnet · Llama 3</text>
+
+  <!-- Messages area -->
+  <!-- AI message 1 -->
+  <circle cx="260" cy="110" r="18" fill="#1e1e3a" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="260" y="115" font-family="sans-serif" font-size="11" fill="#a855f7" text-anchor="middle">AI</text>
+  <rect x="288" y="88" width="580" height="56" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="304" y="108" font-family="sans-serif" font-size="13" fill="#ccc">Hello! I'm brAInstormer, your AI creative assistant. I can help you</text>
+  <text x="304" y="128" font-family="sans-serif" font-size="13" fill="#ccc">generate content, edit images, compose music, write code, and more.</text>
+
+  <!-- User message -->
+  <rect x="510" y="168" width="600" height="44" rx="12" fill="url(#msg-user)"/>
+  <text x="526" y="186" font-family="sans-serif" font-size="13" fill="#fff">Generate a cyberpunk landscape image with neon lights and rain</text>
+  <text x="526" y="202" font-family="sans-serif" font-size="11" fill="#e0c0ff" opacity="0.8">You · just now</text>
+
+  <!-- AI message 2 -->
+  <circle cx="260" cy="255" r="18" fill="#1e1e3a" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="260" y="260" font-family="sans-serif" font-size="11" fill="#a855f7" text-anchor="middle">AI</text>
+  <rect x="288" y="232" width="780" height="100" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="304" y="252" font-family="sans-serif" font-size="13" fill="#ccc">I'll generate that for you using DALL·E 3! Here's your cyberpunk landscape:</text>
+  <!-- Image placeholder in message -->
+  <rect x="304" y="262" width="200" height="60" rx="8" fill="#2a2a4a" stroke="#444" stroke-width="1"/>
+  <text x="404" y="296" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">🖼 Generated Image</text>
+
+  <!-- User message 2 -->
+  <rect x="660" y="354" width="450" height="44" rx="12" fill="url(#msg-user)"/>
+  <text x="676" y="372" font-family="sans-serif" font-size="13" fill="#fff">Now write me a Python script that uses the OpenAI API</text>
+  <text x="676" y="388" font-family="sans-serif" font-size="11" fill="#e0c0ff" opacity="0.8">You · just now</text>
+
+  <!-- AI message 3 - code block -->
+  <circle cx="260" cy="430" r="18" fill="#1e1e3a" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="260" y="435" font-family="sans-serif" font-size="11" fill="#a855f7" text-anchor="middle">AI</text>
+  <rect x="288" y="408" width="780" height="170" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="304" y="428" font-family="sans-serif" font-size="13" fill="#ccc">Sure! Here's a clean Python script:</text>
+  <rect x="304" y="436" width="750" height="130" rx="8" fill="#0d0d0d" stroke="#333" stroke-width="1"/>
+  <text x="318" y="458" font-family="monospace" font-size="11" fill="#c678dd">import</text>
+  <text x="352" y="458" font-family="monospace" font-size="11" fill="#abb2bf"> openai</text>
+  <text x="318" y="476" font-family="monospace" font-size="11" fill="#61afef">client</text>
+  <text x="358" y="476" font-family="monospace" font-size="11" fill="#abb2bf"> = openai.OpenAI(api_key=</text>
+  <text x="514" y="476" font-family="monospace" font-size="11" fill="#98c379">"your-key"</text>
+  <text x="572" y="476" font-family="monospace" font-size="11" fill="#abb2bf">)</text>
+  <text x="318" y="494" font-family="monospace" font-size="11" fill="#c678dd">def</text>
+  <text x="338" y="494" font-family="monospace" font-size="11" fill="#61afef"> ask</text>
+  <text x="356" y="494" font-family="monospace" font-size="11" fill="#abb2bf">(prompt):</text>
+  <text x="332" y="512" font-family="monospace" font-size="11" fill="#c678dd">  return</text>
+  <text x="376" y="512" font-family="monospace" font-size="11" fill="#abb2bf"> client.chat.completions.create(model=</text>
+  <text x="579" y="512" font-family="monospace" font-size="11" fill="#98c379">"gpt-4o"</text>
+  <text x="627" y="512" font-family="monospace" font-size="11" fill="#abb2bf">)</text>
+
+  <!-- Input area -->
+  <rect x="220" y="635" width="980" height="65" fill="#111122" stroke="#222" stroke-width="1"/>
+  <rect x="240" y="647" width="820" height="40" rx="20" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+  <text x="265" y="671" font-family="sans-serif" font-size="13" fill="#555">Ask anything — generate images, write code, compose music...</text>
+  <rect x="1078" y="647" width="100" height="40" rx="20" fill="#a855f7"/>
+  <text x="1128" y="671" font-family="sans-serif" font-size="13" fill="#fff" text-anchor="middle">Send ↵</text>
+</svg>

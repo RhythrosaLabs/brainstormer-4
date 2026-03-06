@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="50%" style="stop-color:#ec4899"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-sm">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#1a1a3a" stroke-width="1" opacity="0.5">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="250" x2="1200" y2="250"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+    <line x1="800" y1="0" x2="800" y2="300"/>
+    <line x1="900" y1="0" x2="900" y2="300"/>
+    <line x1="1000" y1="0" x2="1000" y2="300"/>
+    <line x1="1100" y1="0" x2="1100" y2="300"/>
+  </g>
+
+  <!-- Glowing orbs -->
+  <circle cx="150" cy="150" r="80" fill="#a855f7" opacity="0.05" filter="url(#glow)"/>
+  <circle cx="1050" cy="150" r="80" fill="#6366f1" opacity="0.05" filter="url(#glow)"/>
+  <circle cx="600" cy="80" r="60" fill="#ec4899" opacity="0.04" filter="url(#glow)"/>
+
+  <!-- Floating feature icons -->
+  <!-- Text gen -->
+  <circle cx="80" cy="80" r="30" fill="#1a1a3a" stroke="#a855f7" stroke-width="1.5" opacity="0.8"/>
+  <text x="80" y="87" font-family="sans-serif" font-size="20" fill="#a855f7" text-anchor="middle" filter="url(#glow-sm)">✍</text>
+  <!-- Image -->
+  <circle cx="160" cy="220" r="30" fill="#1a1a3a" stroke="#ec4899" stroke-width="1.5" opacity="0.8"/>
+  <text x="160" y="227" font-family="sans-serif" font-size="20" fill="#ec4899" text-anchor="middle" filter="url(#glow-sm)">🎨</text>
+  <!-- Video -->
+  <circle cx="1050" cy="80" r="30" fill="#1a1a3a" stroke="#6366f1" stroke-width="1.5" opacity="0.8"/>
+  <text x="1050" y="87" font-family="sans-serif" font-size="20" fill="#6366f1" text-anchor="middle" filter="url(#glow-sm)">🎬</text>
+  <!-- Audio -->
+  <circle cx="1120" cy="220" r="30" fill="#1a1a3a" stroke="#0ea5e9" stroke-width="1.5" opacity="0.8"/>
+  <text x="1120" y="227" font-family="sans-serif" font-size="20" fill="#0ea5e9" text-anchor="middle" filter="url(#glow-sm)">🎵</text>
+  <!-- 3D -->
+  <circle cx="80" cy="240" r="24" fill="#1a1a3a" stroke="#22c55e" stroke-width="1.5" opacity="0.6"/>
+  <text x="80" y="247" font-family="sans-serif" font-size="16" fill="#22c55e" text-anchor="middle">⬡</text>
+  <!-- Code -->
+  <circle cx="1100" cy="80" r="24" fill="#1a1a3a" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+  <text x="1100" y="87" font-family="sans-serif" font-size="16" fill="#f59e0b" text-anchor="middle">{}</text>
+
+  <!-- Main title -->
+  <text x="600" y="130" font-family="'Arial Black', sans-serif" font-size="72" font-weight="900"
+    fill="url(#text-grad)" text-anchor="middle" filter="url(#glow)">brAInstormer</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="170" font-family="sans-serif" font-size="20" fill="#888" text-anchor="middle"
+    letter-spacing="4">AI-POWERED CREATIVE SUITE</text>
+
+  <!-- Tag line -->
+  <text x="600" y="208" font-family="sans-serif" font-size="14" fill="#555" text-anchor="middle">
+    Text · Images · Video · Audio · 3D · Code · Documents · Spreadsheets
+  </text>
+
+  <!-- Bottom accent line -->
+  <rect x="450" y="230" width="300" height="2" rx="1" fill="url(#text-grad)" opacity="0.6"/>
+
+  <!-- Version badge -->
+  <rect x="534" y="248" width="56" height="22" rx="11" fill="#a855f7" opacity="0.2" stroke="#a855f7" stroke-width="1"/>
+  <text x="562" y="263" font-family="sans-serif" font-size="11" fill="#a855f7" text-anchor="middle">v4.0</text>
+  <rect x="600" y="248" width="66" height="22" rx="11" fill="#22c55e" opacity="0.15" stroke="#22c55e" stroke-width="1"/>
+  <text x="633" y="263" font-family="sans-serif" font-size="11" fill="#22c55e" text-anchor="middle">MIT License</text>
+</svg>

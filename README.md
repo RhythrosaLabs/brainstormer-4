@@ -1,246 +1,212 @@
-# brAInstormer - AI-Powered Creative Suite
+<p align="center">
+  <img src="screenshots/banner.svg" alt="brAInstormer — AI-Powered Creative Suite" width="100%"/>
+</p>
 
-A powerful, modern creative suite powered by AI, featuring text generation, image editing, video editing, audio production, 3D modeling, and more.
+<p align="center">
+  <a href="https://github.com/RhythrosaLabs/brainstormer-4/stargazers"><img src="https://img.shields.io/github/stars/RhythrosaLabs/brainstormer-4?style=for-the-badge&color=a855f7&labelColor=0d0d1a" alt="Stars"/></a>
+  <a href="https://github.com/RhythrosaLabs/brainstormer-4/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-22c55e?style=for-the-badge&labelColor=0d0d1a" alt="License"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/React-18-61dafb?style=for-the-badge&logo=react&logoColor=61dafb&labelColor=0d0d1a" alt="React 18"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/TypeScript-5-3178c6?style=for-the-badge&logo=typescript&logoColor=3178c6&labelColor=0d0d1a" alt="TypeScript"/></a>
+  <a href="#"><img src="https://img.shields.io/badge/Vite-5-646cff?style=for-the-badge&logo=vite&logoColor=646cff&labelColor=0d0d1a" alt="Vite"/></a>
+</p>
 
-## Table of Contents
+---
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Quick Start](#quick-start)
-  - [API Keys Setup](#api-keys-setup)
-  - [Workspace Overview](#workspace-overview)
-  - [Tools and Features](#tools-and-features)
-- [Components](#components)
-- [AI Models](#ai-models)
-- [Keyboard Shortcuts](#keyboard-shortcuts)
-- [Development](#development)
-- [Contributing](#contributing)
-- [License](#license)
+## About
+
+**brAInstormer** is a fully-featured, browser-based creative suite that puts the power of a dozen professional tools behind a single AI-native interface. Think of it as **Photoshop + Logic Pro + VS Code + Notion** — all in one dark-themed app, with every feature supercharged by state-of-the-art AI models.
+
+Whether you're a developer building a prototype, a musician composing a beat, a designer ideating a mood board, or a writer drafting a pitch — brAInstormer gives you every tool you need without ever leaving your browser. Connect your own API keys, keep everything local, and let the AI do the heavy lifting.
+
+> **Zero data sent to our servers.** All AI calls go directly from your browser to the respective AI provider using your own API keys.
+
+---
+
+## Screenshots
+
+### AI Chat — Multi-modal Generation
+<p align="center">
+  <img src="screenshots/chat.svg" alt="AI Chat interface with multi-model support" width="100%"/>
+</p>
+
+Generate text, code, images, and more in a single conversation. Switch between GPT-4o, Claude Sonnet, and Llama 3 mid-thread.
+
+---
+
+### Image Editor — Layer-based AI Design
+<p align="center">
+  <img src="screenshots/image-editor.svg" alt="Professional image editor with AI generation" width="100%"/>
+</p>
+
+A full layer-based image editor with AI generation (DALL·E 3, Stable Diffusion, Flux), inpainting, adjustments, and professional tools — all in the browser.
+
+---
+
+### Audio DAW — Multi-track Production
+<p align="center">
+  <img src="screenshots/audio-daw.svg" alt="Multi-track audio DAW with piano roll" width="100%"/>
+</p>
+
+Record, sequence, and mix multi-track projects. AI-powered music generation via MusicGen and Stable Audio. Full piano roll for MIDI editing.
+
+---
+
+### Code Editor — AI-Assisted Development
+<p align="center">
+  <img src="screenshots/code-editor.svg" alt="Code editor with AI assistant" width="100%"/>
+</p>
+
+A syntax-highlighted code editor with an AI pair programmer built in. Ask it to explain, refactor, or extend your code without leaving the editor.
+
+---
 
 ## Features
 
-- 🤖 Multi-modal AI generation (text, images, video, audio, 3D)
-- 🎨 Professional-grade image editor
-- 🎬 Video editing and composition
-- 🎵 Digital audio workstation
-- 🎮 3D modeling and visualization
-- 📝 Document editing and collaboration
-- 📊 Spreadsheet and data analysis
-- 📈 Chart creation and visualization
-- 💻 Code editing with AI assistance
-- 📁 File management system
-- 📋 Project board for task management
-- 📅 Calendar integration
+| Category | What's Included |
+|---|---|
+| 🤖 **AI Chat** | GPT-4o, Claude Sonnet, Llama 3 · file attachments · code highlighting |
+| 🎨 **Image Editor** | Layers · brushes · AI generation · inpainting · export |
+| 🎬 **Video Editor** | Timeline · AI video gen (Luma, Kling, Stable Video) · effects |
+| 🎵 **Audio DAW** | Multi-track · piano roll · AI music gen · MIDI · effects |
+| ⬡ **3D Viewer** | AI model generation · textures · scene composition |
+| 💻 **Code Editor** | Syntax highlight · AI assistant · terminal · live preview |
+| 📝 **Document Editor** | Rich text · markdown · AI writing assist |
+| 📊 **Spreadsheet** | Formulas · charts · AI data analysis |
+| 📈 **Chart Builder** | 10+ chart types · AI-generated insights |
+| 📁 **File Manager** | Drag-and-drop · multi-format viewer |
+| 📋 **Project Board** | Kanban · AI task breakdown |
+| 📅 **Calendar** | Event management · AI scheduling |
 
-## Requirements
+---
 
-- Node.js 18.0.0 or higher
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- API keys for AI services:
-  - OpenAI
-  - Stability AI
-  - Anthropic
-  - Meta AI
-  - Luma AI
-  - Replicate
+## Getting Started
 
-## Installation
+### Prerequisites
 
-1. Clone the repository:
+- **Node.js 18+** — [Download](https://nodejs.org)
+- API keys for the AI services you want to use (all optional — the app works with whichever you provide)
+
+### Installation
+
 ```bash
-git clone https://github.com/yourusername/brainstormer.git
-cd brainstormer
-```
+# 1. Clone the repo
+git clone https://github.com/RhythrosaLabs/brainstormer-4.git
+cd brainstormer-4
 
-2. Install dependencies:
-```bash
+# 2. Install dependencies
 npm install
-```
 
-3. Create a `.env` file in the root directory:
-```env
-VITE_OPENAI_API_KEY=your_openai_key
-VITE_STABILITY_API_KEY=your_stability_key
-VITE_ANTHROPIC_API_KEY=your_anthropic_key
-VITE_META_API_KEY=your_meta_key
-VITE_LUMA_API_KEY=your_luma_key
-VITE_REPLICATE_API_KEY=your_replicate_key
-```
-
-4. Start the development server:
-```bash
+# 3. Start the dev server
 npm run dev
 ```
 
-## Usage
-
-### Quick Start
-
-1. Launch the application
-2. Configure your API keys in Settings
-3. Select your desired creative tool from the sidebar
-4. Start creating with AI assistance
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### API Keys Setup
 
-1. Click the Settings icon in the sidebar
-2. Enter your API keys for each service
-3. Keys are stored locally in your browser
-4. No keys are transmitted to external servers
+No `.env` file required. Open the app → click **Settings** (⚙️) in the sidebar → paste your API keys. They are saved to `localStorage` only — never transmitted to any server other than the AI provider directly.
 
-### Workspace Overview
+| Service | Used For | Get Key |
+|---|---|---|
+| OpenAI | GPT-4o chat, DALL·E 3 images | [platform.openai.com](https://platform.openai.com) |
+| Anthropic | Claude Sonnet chat | [console.anthropic.com](https://console.anthropic.com) |
+| Stability AI | Stable Diffusion, Stable Audio, Stable Video | [platform.stability.ai](https://platform.stability.ai) |
+| Replicate | 1000+ open-source models | [replicate.com](https://replicate.com) |
+| Luma AI | Dream Machine video generation | [lumalabs.ai](https://lumalabs.ai) |
 
-- **Left Sidebar**: Main navigation and tool selection
-- **Chat Panel**: AI assistant for text generation and help
-- **Tool Area**: Main workspace for the selected tool
-- **Properties Panel**: Context-sensitive controls and settings
-
-### Tools and Features
-
-#### Text Generation
-- Multiple AI models support
-- Context-aware responses
-- Code generation
-- Creative writing assistance
-
-#### Image Editor
-- Layer-based editing
-- AI image generation
-- Professional tools (brush, selection, etc.)
-- Filters and adjustments
-- Export in multiple formats
-
-#### Video Editor
-- Timeline-based editing
-- AI video generation
-- Effects and transitions
-- Multiple format support
-- Export options
-
-#### Audio Editor
-- Multi-track recording
-- AI music generation
-- Virtual instruments
-- Effects processing
-- MIDI support
-
-#### 3D Modeling
-- AI model generation
-- Basic modeling tools
-- Texture and material editing
-- Scene composition
-- Multiple format export
-
-## Components
-
-The application is built with modular components:
-
-- `Chat`: AI communication interface
-- `ImageEditor`: Professional image editing
-- `VideoEditor`: Video composition and editing
-- `AudioEditor`: Digital audio workstation
-- `ThreeDViewer`: 3D model visualization
-- `DocumentEditor`: Text document editing
-- `SpreadsheetEditor`: Data manipulation
-- `ChartEditor`: Data visualization
-- `CodeEditor`: Code editing with AI
-- `FileManager`: File organization
-- `ProjectBoard`: Task management
-- `Calendar`: Event scheduling
+---
 
 ## AI Models
 
-### Text Models
-- GPT-4 Omega (OpenAI)
-- Claude Sonnet (Anthropic)
-- Llama (Meta)
+### Text & Chat
+- **GPT-4o** (OpenAI) — fast, multimodal
+- **Claude Sonnet** (Anthropic) — nuanced, long context
+- **Llama 3** (Meta via Replicate) — open-source
 
-### Image Models
-- DALL·E 3 (OpenAI)
-- Stable Diffusion 3 (Stability AI)
-- Flux Pro (Flux)
+### Image Generation
+- **DALL·E 3** (OpenAI) — prompt accuracy
+- **Stable Diffusion 3** (Stability AI) — creative flexibility
+- **Flux Pro** (Replicate) — photorealism
 
-### Video Models
-- Luma (Luma AI)
-- Stable Video (Stability AI)
-- Kling (Kling AI)
+### Video Generation
+- **Dream Machine** (Luma AI)
+- **Stable Video Diffusion** (Stability AI)
+- **Kling** (Kling AI via Replicate)
 
-### Audio Models
-- MusicGen (Meta)
-- Stable Audio (Stability AI)
+### Audio Generation
+- **MusicGen** (Meta via Replicate)
+- **Stable Audio** (Stability AI)
 
-### 3D Models
-- Stable Fast 3D (Stability AI)
+### 3D Generation
+- **Stable Fast 3D** (Stability AI)
+
+---
 
 ## Keyboard Shortcuts
 
-### Global
-- `Cmd/Ctrl + K`: Command palette
-- `Cmd/Ctrl + S`: Save
-- `Cmd/Ctrl + /`: Toggle help
+| Shortcut | Action |
+|---|---|
+| `⌘/Ctrl + K` | Open command palette |
+| `⌘/Ctrl + S` | Save |
+| `⌘/Ctrl + /` | Toggle help |
+| `Space` | Play / Pause (Audio & Video editors) |
+| `V` | Move tool (Image Editor) |
+| `B` | Brush tool (Image Editor) |
+| `T` | Text tool (Image Editor) |
+| `R` | Record (Audio DAW) |
 
-### Image Editor
-- `V`: Move tool
-- `M`: Marquee tool
-- `L`: Lasso tool
-- `W`: Magic wand
-- `B`: Brush tool
-- `E`: Eraser tool
-- `T`: Text tool
-- `C`: Crop tool
-- `Z`: Zoom tool
+---
 
-### Video Editor
-- `Space`: Play/Pause
-- `K`: Split clip
-- `Delete`: Remove clip
-- `[`: Previous frame
-- `]`: Next frame
+## Project Structure
 
-### Audio Editor
-- `Space`: Play/Pause
-- `R`: Record
-- `M`: Mute track
-- `S`: Solo track
-
-## Development
-
-### Project Structure
 ```
 src/
-  ├── components/     # React components
-  ├── services/      # API and business logic
-  ├── hooks/         # Custom React hooks
-  ├── types/         # TypeScript definitions
-  ├── utils/         # Helper functions
-  └── styles/        # CSS and styling
+├── components/         # UI components (per-tool subdirectories)
+│   ├── audio-editor/   # Multi-track DAW
+│   ├── chat/           # AI chat interface
+│   ├── code-editor/    # Code editing + AI assistant
+│   ├── image-editor/   # Canvas, layers, tools
+│   ├── video-editor/   # Timeline editor
+│   └── three-editor/   # 3D scene viewer
+├── services/           # API integrations (OpenAI, Stability, etc.)
+├── hooks/              # Custom React hooks
+├── types/              # TypeScript type definitions
+├── utils/              # Helpers and utilities
+└── lib/                # API client abstractions
 ```
 
-### Build
+---
+
+## Building for Production
+
 ```bash
-npm run build
+npm run build        # Outputs to dist/
+npm run preview      # Serve the production build locally
+npm run lint         # ESLint check
 ```
 
-### Testing
-```bash
-npm run test
-```
-
-### Linting
-```bash
-npm run lint
-```
+---
 
 ## Contributing
 
+Contributions are welcome! To get started:
+
 1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create a feature branch (`git checkout -b feat/your-feature`)
+3. Commit your changes (`git commit -m 'feat: add your feature'`)
+4. Push to the branch (`git push origin feat/your-feature`)
+5. Open a Pull Request
+
+Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
+
+---
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details
+[MIT](LICENSE) © [RhythrosaLabs](https://github.com/RhythrosaLabs)
+
+---
+
+<p align="center">
+  Built with ⚡ React · TypeScript · Vite · Tailwind CSS
+</p>
