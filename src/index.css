@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-[#1a1a1a] text-white;
+}
+
+/* Gradient text animation */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#ff1b6b] to-[#45caff] animate-gradient;
+  background-size: 200% auto;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Resizable panel styles */
+[data-panel] {
+  display: flex;
+  flex-direction: column;
+}
+
+[data-panel-group] {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+[data-panel-resize-handle] {
+  background-color: #333;
+  transition: background-color 150ms ease;
+}
+
+[data-panel-resize-handle]:hover {
+  background-color: #45caff;
+}
+
+[data-panel-resize-handle][data-resize-active] {
+  background-color: #45caff;
+}

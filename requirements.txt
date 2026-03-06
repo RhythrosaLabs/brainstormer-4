@@ -1,0 +1,47 @@
+# Node.js Runtime
+node>=18.0.0
+
+# Package Manager
+npm>=9.0.0
+
+# Development Dependencies
+typescript>=5.5.3
+vite>=5.4.2
+eslint>=9.9.1
+tailwindcss>=3.4.1
+autoprefixer>=10.4.18
+postcss>=8.4.35
+
+# Core Dependencies
+react>=18.3.1
+react-dom>=18.3.1
+lucide-react>=0.344.0
+
+# Type Definitions
+@types/react>=18.3.5
+@types/react-dom>=18.3.0
+
+# Browser Requirements
+- Chrome >= 90
+- Firefox >= 90
+- Safari >= 14
+- Edge >= 90
+
+# Hardware Requirements
+- CPU: Modern multi-core processor
+- RAM: 8GB minimum, 16GB recommended
+- GPU: WebGL 2.0 compatible
+- Storage: 1GB free space
+- Display: 1920x1080 minimum resolution
+
+# Network
+- Broadband internet connection
+- Minimum 5Mbps upload/download
+
+# API Services
+- OpenAI API access
+- Stability AI API access
+- Anthropic API access
+- Meta AI API access
+- Luma AI API access
+- Replicate API access
