@@ -210,3 +210,8 @@ Please follow [Conventional Commits](https://www.conventionalcommits.org/) for c
 <p align="center">
   Built with ⚡ React · TypeScript · Vite · Tailwind CSS
 </p>
+
+
+## Support
+
+If you find this useful, consider supporting via [PayPal](https://paypal.me/noodlebake)
